@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<body>
+<script>
+    let number = [];
+    let count = 0;
+    let data = " ";
+    let x = parseInt(prompt("Input number"));
+    for (let i = 0; i < 100; i++) {
+        number[i] = Math.round(Math.random() * 100)
+    }
+    for (let j = 0; j < number.length; j++) {
+        if (number[j] === x) {
+            count++;
+        }
+    }
+    for (let k = 0; k < number.length; k++) {
+        if (k % 10 === 9 && k!==0) {
+            data +=(number[k] + "<br>")
+        } else {
+            data += (number[k] + "...")
+        }
+    }
+    document.write("Number " + x + " have " + count + " in array:" + "<br>");
+    document.write(data);
+</script>
+</body>
+</html>
